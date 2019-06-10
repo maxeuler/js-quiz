@@ -1,5 +1,5 @@
-import GameView from '../components/GameView';
+import Content from '../components/Content';
 
-const Home = props => <GameView />;
+const Home = props => <Content />;
 
 export default Home;

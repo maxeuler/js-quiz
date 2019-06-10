@@ -25,7 +25,7 @@ class Control extends Component {
 	render() {
 		return (
 			<Buttons>
-				<button>Cancel</button>
+				<button onClick={this.props.gameOver}>Cancel</button>
 				<button onClick={this.props.next}>Next</button>
 			</Buttons>
 		);

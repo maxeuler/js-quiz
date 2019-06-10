@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-const Card = styled.div`
+export const Card = styled.div`
 	width: 40%;
 	border: 2px solid ${props => props.theme.primary};
 	border-radius: 10px;
@@ -12,6 +12,10 @@ const Card = styled.div`
 		font-size: 1.4rem;
 		margin: 2rem;
 	}
+	h1 {
+		text-align: center;
+		font-weight: 300;
+	}
 	.answers {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -19,7 +23,8 @@ const Card = styled.div`
 		margin: 3rem auto;
 		width: 80%;
 	}
-	button {
+	.wrong,
+	.correct {
 		height: 8rem;
 		width: 16rem;
 		margin: 0 auto;
@@ -30,7 +35,8 @@ const Card = styled.div`
 		:hover {
 			background: rgba(0, 0, 0, 0.05);
 		}
-		:focus {
+		:focus,
+		:active {
 			&.wrong {
 				border: 2px solid red;
 			}
@@ -40,9 +46,23 @@ const Card = styled.div`
 			outline: none;
 		}
 	}
+	.home {
+		width: 100%;
+		height: 4rem;
+		font-size: 2rem;
+		border: none;
+		background: none;
+		margin: 2rem 0;
+		color: ${props => props.theme.primary};
+		font-weight: 500;
+		cursor: pointer;
+		:focus {
+			outline: none;
+		}
+	}
 `;
 
-class QuestionCard extends Component {
+class QuestionCard extends PureComponent {
 	render() {
 		const { question } = this.props;
 		const answers = [
