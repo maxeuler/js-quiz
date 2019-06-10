@@ -1,3 +1,5 @@
-const Home = props => <h1>Hello World!</h1>;
+import GameView from '../components/GameView';
+
+const Home = props => <GameView />;
 
 export default Home;
