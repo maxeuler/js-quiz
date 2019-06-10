@@ -26,7 +26,7 @@ class Control extends Component {
 		return (
 			<Buttons>
 				<button>Cancel</button>
-				<button>Next</button>
+				<button onClick={this.props.next}>Next</button>
 			</Buttons>
 		);
 	}

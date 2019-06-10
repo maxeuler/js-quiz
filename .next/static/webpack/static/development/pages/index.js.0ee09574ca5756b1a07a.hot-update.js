@@ -1,9 +1,9 @@
 webpackHotUpdate("static/development/pages/index.js",{
 
-/***/ "./components/GameView.js":
-/*!********************************!*\
-  !*** ./components/GameView.js ***!
-  \********************************/
+/***/ "./components/Control.js":
+/*!*******************************!*\
+  !*** ./components/Control.js ***!
+  \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18,18 +18,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _QuestionCard__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./QuestionCard */ "./components/QuestionCard.js");
-/* harmony import */ var _Control__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Control */ "./components/Control.js");
 
 
 
 
 
 
-var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/GameView.js";
+var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/Control.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\ttext-align: center;\n\tfont-size: 3rem;\n\tfont-weight: 300;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\tjustify-content: space-around;\n\tbutton {\n\t\tpadding: 1.5rem;\n\t\tbackground: ", ";\n\t\tcolor: #fff;\n\t\tfont-size: 1.5rem;\n\t\tborder: none;\n\t\tborder-radius: 3px;\n\t\tcursor: pointer;\n\t\twidth: 100px;\n\t\t:hover {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -40,52 +38,53 @@ function _templateObject() {
 
 
 
+var Buttons = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div(_templateObject(), function (props) {
+  return props.theme.primary;
+});
 
-
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3(_templateObject());
-
-var GameView =
+var Control =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(GameView, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Control, _Component);
 
-  function GameView() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, GameView);
+  function Control() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Control);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(GameView).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Control).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(GameView, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Control, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Title, {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Buttons, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 27
         },
         __self: this
-      }, "Frage 1 von 10"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 28
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: this.props.next,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 29
         },
         __self: this
-      }));
+      }, "Next"));
     }
   }]);
 
-  return GameView;
+  return Control;
 }(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (GameView);
+/* harmony default export */ __webpack_exports__["default"] = (Control);
 
 /***/ })
 
 })
-//# sourceMappingURL=index.js.40b0745f081a1cc0dbb7.hot-update.js.map
+//# sourceMappingURL=index.js.0ee09574ca5756b1a07a.hot-update.js.map

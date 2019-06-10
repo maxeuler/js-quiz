@@ -31,23 +31,54 @@ const Card = styled.div`
 			background: rgba(0, 0, 0, 0.05);
 		}
 		:focus {
+			&.wrong {
+				border: 2px solid red;
+			}
+			&.correct {
+				border: 2px solid #2ecc71;
+			}
 			outline: none;
-			border: 2px solid #2ecc71;
 		}
 	}
 `;
 
 class QuestionCard extends Component {
 	render() {
+		const { question } = this.props;
+		const answers = [
+			<button
+				className="correct"
+				key={Math.random()}
+				onClick={this.props.answerSelected}
+			>
+				{question.correct}
+			</button>,
+			<button
+				className="wrong"
+				key={Math.random()}
+				onClick={this.props.answerSelected}
+			>
+				{question.wrong1}
+			</button>,
+			<button
+				className="wrong"
+				key={Math.random()}
+				onClick={this.props.answerSelected}
+			>
+				{question.wrong2}
+			</button>,
+			<button
+				className="wrong"
+				key={Math.random()}
+				onClick={this.props.answerSelected}
+			>
+				{question.wrong3}
+			</button>
+		];
 		return (
 			<Card>
-				<p>Frage</p>
-				<div className="answers">
-					<button>Answer gds svwsd vwse evwsvw</button>
-					<button>Answer</button>
-					<button>Answer</button>
-					<button>Answer</button>
-				</div>
+				<p>{question.question}</p>
+				<div className="answers">{answers.sort(() => Math.random() - 0.5)}</div>
 			</Card>
 		);
 	}
