@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -14,12 +15,27 @@ const StyledHeader = styled.header`
 		font-size: 3rem;
 		font-weight: 300;
 	}
+	a {
+		text-decoration: none;
+		color: #000;
+		margin: 0 1rem;
+		cursor: pointer;
+	}
+	nav {
+	}
 `;
 
 const Header = props => (
 	<StyledHeader>
 		<h3>JS-Quiz</h3>
-		<p>Add Question</p>
+		<nav>
+			<Link href="/">
+				<a>Home</a>
+			</Link>
+			<Link href="/add">
+				<a>Add Question</a>
+			</Link>
+		</nav>
 	</StyledHeader>
 );
 

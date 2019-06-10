@@ -109,9 +109,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _GameView__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./GameView */ "./components/GameView.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _GameView__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./GameView */ "./components/GameView.js");
+
 
 
 
@@ -121,7 +125,24 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/Content.js";
 
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\twidth: 40%;\n\tmargin: 4rem auto;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-around;\n\tpadding: 2rem;\n\theight: 300px;\n\tborder: 2px solid ", ";\n\tborder-radius: 5px;\n\th3 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t\tfont-size: 3rem;\n\t}\n\tbutton {\n\t\tpadding: 1rem;\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 3px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t}\n"]);
 
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Welcome = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div(_templateObject(), function (props) {
+  return props.theme.primary;
+}, function (props) {
+  return props.theme.primary;
+});
 
 var Content =
 /*#__PURE__*/
@@ -163,24 +184,30 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Content, [{
     key: "render",
     value: function render() {
-      return this.state.gameMode ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_GameView__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      return this.state.gameMode ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_GameView__WEBPACK_IMPORTED_MODULE_10__["default"], {
         gameOver: this.gameOver,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 48
         },
         __self: this
-      }) : react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }) : react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Welcome, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 50
         },
         __self: this
-      }, "Welcome!", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Welcome!"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         onClick: this.startGame,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 52
         },
         __self: this
       }, "Start Game"));
@@ -188,7 +215,7 @@ function (_Component) {
   }]);
 
   return Content;
-}(react__WEBPACK_IMPORTED_MODULE_7__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Content);
 
@@ -222,7 +249,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/Control.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tmargin: 0 auto;\n\tdisplay: flex;\n\tjustify-content: space-around;\n\tbutton {\n\t\tpadding: 1.5rem;\n\t\tbackground: ", ";\n\t\tcolor: #fff;\n\t\tfont-size: 1.5rem;\n\t\tborder: none;\n\t\tborder-radius: 3px;\n\t\tcursor: pointer;\n\t\twidth: 100px;\n\t\t:hover {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tmargin: 0 auto;\n\tmargin-bottom: 2rem;\n\tdisplay: flex;\n\tjustify-content: space-around;\n\tbutton {\n\t\tpadding: 1.5rem;\n\t\tbackground: ", ";\n\t\tcolor: #fff;\n\t\tfont-size: 1.5rem;\n\t\tborder: none;\n\t\tborder-radius: 3px;\n\t\tcursor: pointer;\n\t\twidth: 100px;\n\t\t:hover {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t\t:disabled {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -254,24 +281,25 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Buttons, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.props.gameOver,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 32
         },
         __self: this
       }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        disabled: this.props.disabled,
         onClick: this.props.next,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 33
         },
         __self: this
-      }, "Next"));
+      }, this.props.lastQuestion ? 'Review' : 'Next'));
     }
   }]);
 
@@ -320,7 +348,7 @@ var GameOver = function GameOver(props) {
       lineNumber: 8
     },
     __self: this
-  }, props.correct, " of ", props.questions, " Questions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }, props.correct, " of ", props.questions, " questions correct!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.gameOver,
     className: "home",
     __source: {
@@ -344,23 +372,25 @@ var GameOver = function GameOver(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _QuestionCard__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./QuestionCard */ "./components/QuestionCard.js");
-/* harmony import */ var _Control__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./Control */ "./components/Control.js");
-/* harmony import */ var _GameOver__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./GameOver */ "./components/GameOver.js");
-/* harmony import */ var _questions_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../questions.json */ "./questions.json");
-var _questions_json__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../questions.json */ "./questions.json", 1);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _QuestionCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./QuestionCard */ "./components/QuestionCard.js");
+/* harmony import */ var _Control__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Control */ "./components/Control.js");
+/* harmony import */ var _GameOver__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./GameOver */ "./components/GameOver.js");
+/* harmony import */ var _questions_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../questions.json */ "./questions.json");
+var _questions_json__WEBPACK_IMPORTED_MODULE_14___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../questions.json */ "./questions.json", 1);
+
 
 
 
@@ -372,7 +402,7 @@ var _questions_json__WEBPACK_IMPORTED_MODULE_13___namespace = /*#__PURE__*/__web
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/GameView.js";
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\twidth: 40%;\n\ttext-align: center;\n\tmargin: 3rem auto;\n\tfont-size: 2em;\n\tfont-weight: 300;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n\twidth: 40%;\n\ttext-align: center;\n\tmargin: 3rem auto;\n\tfont-size: 2em;\n\tfont-weight: 300;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -382,7 +412,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\ttext-align: center;\n\tfont-size: 3rem;\n\tfont-weight: 300;\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_8__["default"])(["\n\ttext-align: center;\n\tfont-size: 3rem;\n\tfont-weight: 300;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -397,28 +427,28 @@ function _templateObject() {
 
 
 
-var Title = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.h3(_templateObject());
-var Explanation = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.p(_templateObject2());
+var Title = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.h3(_templateObject());
+var Explanation = styled_components__WEBPACK_IMPORTED_MODULE_10___default.a.p(_templateObject2());
 
 var GameView =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(GameView, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(GameView, _Component);
 
   function GameView() {
     var _getPrototypeOf2;
 
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, GameView);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, GameView);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(GameView)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(GameView)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "state", {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {
       questions: [],
       questionsCount: 0,
       currentQuestion: 0,
@@ -428,7 +458,7 @@ function (_Component) {
       questionAnswered: false
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "nextQuestion", function () {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "nextQuestion", function () {
       if (_this.state.questionsCount - 1 == _this.state.currentQuestion) {
         // quiz is over
         _this.setState({
@@ -447,7 +477,7 @@ function (_Component) {
       });
     });
 
-    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this), "answerSelected", function (e) {
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "answerSelected", function (e) {
       console.log(e.target.className);
 
       _this.setState({
@@ -467,62 +497,68 @@ function (_Component) {
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(GameView, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(GameView, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var shuffledQuestions = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_questions_json__WEBPACK_IMPORTED_MODULE_14__).sort(function () {
+        return Math.random() - 0.5;
+      });
+
       this.setState({
-        questions: _questions_json__WEBPACK_IMPORTED_MODULE_13__,
-        questionsCount: _questions_json__WEBPACK_IMPORTED_MODULE_13__.length
+        questions: shuffledQuestions,
+        questionsCount: _questions_json__WEBPACK_IMPORTED_MODULE_14__.length
       });
     }
   }, {
     key: "render",
     value: function render() {
       var currentQuestion = this.state.questions[this.state.currentQuestion] || '';
-      return this.state.quizIsRunning ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Title, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, "Frage 1 von 10"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-        style: this.state.questionAnswered ? {
-          pointerEvents: 'none'
-        } : null,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        question: this.state.questions[this.state.currentQuestion] || '',
-        answerSelected: this.answerSelected,
+      return this.state.quizIsRunning ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Title, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 69
         },
         __self: this
-      })), this.state.showExplanation && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Explanation, {
+      }, "Frage ", this.state.currentQuestion + 1, " von ", this.state.questionsCount), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+        style: this.state.questionAnswered ? {
+          pointerEvents: 'none'
+        } : null,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 72
         },
         __self: this
-      }, currentQuestion.explanation), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        question: this.state.questions[this.state.currentQuestion] || '',
+        answerSelected: this.answerSelected,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 75
+        },
+        __self: this
+      })), this.state.showExplanation && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        },
+        __self: this
+      }, currentQuestion.explanation), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        disabled: !this.state.questionAnswered,
         next: this.nextQuestion,
         gameOver: this.props.gameOver,
+        lastQuestion: this.state.currentQuestion + 1 === this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 84
         },
         __self: this
-      })) : react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_GameOver__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameOver__WEBPACK_IMPORTED_MODULE_13__["default"], {
         gameOver: this.props.gameOver,
         correct: this.state.correctAnswers,
         questions: this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 94
         },
         __self: this
       });
@@ -530,7 +566,7 @@ function (_Component) {
   }]);
 
   return GameView;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (GameView);
 
@@ -565,7 +601,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/QuestionCard.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tborder: 2px solid ", ";\n\tborder-radius: 10px;\n\tbox-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);\n\tmargin: 4rem auto;\n\tp {\n\t\ttext-align: center;\n\t\tfont-size: 1.4rem;\n\t\tmargin: 2rem;\n\t}\n\th1 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t}\n\t.answers {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: 1fr 1fr;\n\t\tgrid-gap: 20px;\n\t\tmargin: 3rem auto;\n\t\twidth: 80%;\n\t}\n\t.wrong,\n\t.correct {\n\t\theight: 8rem;\n\t\twidth: 16rem;\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 5px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t\t:focus,\n\t\t:active {\n\t\t\t&.wrong {\n\t\t\t\tborder: 2px solid red;\n\t\t\t}\n\t\t\t&.correct {\n\t\t\t\tborder: 2px solid #2ecc71;\n\t\t\t}\n\t\t\toutline: none;\n\t\t}\n\t}\n\t.home {\n\t\twidth: 100%;\n\t\theight: 4rem;\n\t\tfont-size: 2rem;\n\t\tborder: none;\n\t\tbackground: none;\n\t\tmargin: 2rem 0;\n\t\tcolor: ", ";\n\t\tfont-weight: 500;\n\t\tcursor: pointer;\n\t\t:focus {\n\t\t\toutline: none;\n\t\t}\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 80%;\n\tborder: 2px solid ", ";\n\tborder-radius: 10px;\n\tbox-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);\n\tmargin: 4rem auto;\n\tp {\n\t\ttext-align: center;\n\t\tfont-size: 1.4rem;\n\t\tmargin: 2rem;\n\t}\n\th1 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t}\n\t.answers {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: 1fr 1fr;\n\t\tgrid-gap: 20px;\n\t\tmargin: 3rem auto;\n\t\twidth: 80%;\n\t}\n\t.wrong,\n\t.correct {\n\t\theight: 8rem;\n\t\twidth: 80%\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 5px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t\t:focus,\n\t\t:active {\n\t\t\t&.wrong {\n\t\t\t\tborder: 2px solid red;\n\t\t\t}\n\t\t\t&.correct {\n\t\t\t\tborder: 2px solid #2ecc71;\n\t\t\t}\n\t\t\toutline: none;\n\t\t}\n\t}\n\t.home {\n\t\twidth: 100%;\n\t\theight: 4rem;\n\t\tfont-size: 2rem;\n\t\tborder: none;\n\t\tbackground: none;\n\t\tmargin: 2rem 0;\n\t\tcolor: ", ";\n\t\tfont-weight: 500;\n\t\tcursor: pointer;\n\t\t:focus {\n\t\t\toutline: none;\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -668,6 +704,39 @@ function (_PureComponent) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "core-js/library/fn/array/from");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "core-js/library/fn/is-iterable");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
@@ -753,6 +822,31 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/l
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithoutHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
 
 /***/ }),
 
@@ -914,6 +1008,44 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _iterableToArray(iter) {
+  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
@@ -992,6 +1124,28 @@ function _taggedTemplateLiteral(strings, raw) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js ***!
@@ -1061,10 +1215,10 @@ var Home = function Home(props) {
 /*!************************!*\
   !*** ./questions.json ***!
   \************************/
-/*! exports provided: 0, 1, 2, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-module.exports = [{"question":"What does [...'Array'] return?","correct":"['A', 'r', 'r', 'a', 'y']","wrong1":"['Array']","wrong2":"[['A', 'r', 'r', 'a', 'y']]","wrong3":"[[], 'Array']","explanation":"The spread operator maps every character of an iterable to one element. A string is an iterable."},{"question":"What is the output of console.log(undefined * 2)?","correct":"NaN","wrong1":"0","wrong2":"undefined","wrong3":"TypeError","explanation":"Calculating with undefined results in not a number."},{"question":"What is not a way to type cast values?","correct":"typeof","wrong1":"Boolean()","wrong2":"String()","wrong3":"parseFloat()","explanation":"The typeof operator simply returns the data type of the operand."}];
+module.exports = [{"question":"What does [...'Array'] return?","correct":"['A', 'r', 'r', 'a', 'y']","wrong1":"['Array']","wrong2":"[['A', 'r', 'r', 'a', 'y']]","wrong3":"[[], 'Array']","explanation":"The spread operator maps every character of an iterable to one element. A string is an iterable."},{"question":"What is the output of console.log(undefined * 2)?","correct":"NaN","wrong1":"0","wrong2":"undefined","wrong3":"TypeError","explanation":"Calculating with undefined results in 'not a number'."},{"question":"What is not a way to type cast values?","correct":"typeof","wrong1":"Boolean()","wrong2":"String()","wrong3":"parseFloat()","explanation":"The typeof operator simply returns the data type of the operand."},{"question":"How can you empty this: let array = [1, 2, 3, 4] ?","correct":"array.length = 0","wrong1":"array.length = null","wrong2":"array.empty()","wrong3":"array.slice(-1)","explanation":"By setting the array's length to 0, we remove all elements from the original array."},{"question":"What is the output of +true ?","correct":"1","wrong1":"false","wrong2":"TypeError","wrong3":"undefined","explanation":"The unary plus tries to convert an operand to a number. True is 1 and false is 0."},{"question":"What is the output of !hello ?","correct":"false","wrong1":"true","wrong2":"TypeError","wrong3":"nan","explanation":"A string is a truthy value. Not truthy is falsey, so the output is false."}];
 
 /***/ }),
 
@@ -1077,6 +1231,39 @@ module.exports = [{"question":"What does [...'Array'] return?","correct":"['A', 
 
 module.exports = __webpack_require__(/*! /Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "core-js/library/fn/array/from":
+/*!************************************************!*\
+  !*** external "core-js/library/fn/array/from" ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/array/from");
+
+/***/ }),
+
+/***/ "core-js/library/fn/array/is-array":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/array/is-array" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "core-js/library/fn/is-iterable":
+/*!*************************************************!*\
+  !*** external "core-js/library/fn/is-iterable" ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/is-iterable");
 
 /***/ }),
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Header from './Header';
 
 const GlobalStyle = createGlobalStyle`
@@ -21,12 +21,17 @@ const theme = {
 	primary: '#d35400'
 };
 
+const Inner = styled.div`
+	max-width: 1000px;
+	margin: 0 auto;
+`;
+
 const Page = props => (
 	<ThemeProvider theme={theme}>
 		<>
 			<GlobalStyle />
 			<Header />
-			{props.children}
+			<Inner>{props.children}</Inner>
 		</>
 	</ThemeProvider>
 );

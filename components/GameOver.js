@@ -6,7 +6,7 @@ const GameOver = props => (
 	<Card>
 		<h1>Game Over</h1>
 		<p>
-			{props.correct} of {props.questions} Questions
+			{props.correct} of {props.questions} questions correct!
 		</p>
 		<button onClick={props.gameOver} className="home">
 			Home

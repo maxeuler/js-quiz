@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 export const Card = styled.div`
-	width: 40%;
+	width: 80%;
 	border: 2px solid ${props => props.theme.primary};
 	border-radius: 10px;
 	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);
@@ -26,7 +26,7 @@ export const Card = styled.div`
 	.wrong,
 	.correct {
 		height: 8rem;
-		width: 16rem;
+		width: 80%
 		margin: 0 auto;
 		border: 1px solid ${props => props.theme.primary};
 		border-radius: 5px;

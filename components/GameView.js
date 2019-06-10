@@ -31,7 +31,11 @@ class GameView extends Component {
 	};
 
 	componentDidMount() {
-		this.setState({ questions, questionsCount: questions.length });
+		const shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
+		this.setState({
+			questions: shuffledQuestions,
+			questionsCount: questions.length
+		});
 	}
 
 	nextQuestion = () => {
@@ -62,7 +66,9 @@ class GameView extends Component {
 			this.state.questions[this.state.currentQuestion] || '';
 		return this.state.quizIsRunning ? (
 			<>
-				<Title>Frage 1 von 10</Title>
+				<Title>
+					Frage {this.state.currentQuestion + 1} von {this.state.questionsCount}
+				</Title>
 				<div
 					style={this.state.questionAnswered ? { pointerEvents: 'none' } : null}
 				>
@@ -75,7 +81,14 @@ class GameView extends Component {
 				{this.state.showExplanation && (
 					<Explanation>{currentQuestion.explanation}</Explanation>
 				)}
-				<Control next={this.nextQuestion} gameOver={this.props.gameOver} />
+				<Control
+					disabled={!this.state.questionAnswered}
+					next={this.nextQuestion}
+					gameOver={this.props.gameOver}
+					lastQuestion={
+						this.state.currentQuestion + 1 === this.state.questionsCount
+					}
+				/>
 			</>
 		) : (
 			<GameOver
