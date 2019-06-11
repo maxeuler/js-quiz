@@ -69,7 +69,7 @@ var Header = function Header(props) {
       lineNumber: 33
     },
     __self: this
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, "Game")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: "/add",
     __source: {
       fileName: _jsxFileName,

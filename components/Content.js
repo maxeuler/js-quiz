@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GameView from './GameView';
 
 const Welcome = styled.div`
-	width: 40%;
+	width: 60%;
 	margin: 4rem auto;
 	display: flex;
 	flex-direction: column;

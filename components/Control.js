@@ -16,6 +16,7 @@ const Buttons = styled.div`
 		border-radius: 3px;
 		cursor: pointer;
 		width: 100px;
+		margin: 0 0.5rem;
 		:hover {
 			background: rgba(211, 84, 0, 0.8);
 		}
@@ -30,7 +31,7 @@ class Control extends Component {
 		return (
 			<Buttons>
 				<button onClick={this.props.gameOver}>Cancel</button>
-				<button disabled={this.props.disabled} onClick={this.props.next}>
+				<button onClick={this.props.next}>
 					{this.props.lastQuestion ? 'Review' : 'Next'}
 				</button>
 			</Buttons>

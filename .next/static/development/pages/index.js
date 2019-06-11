@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/Content.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\twidth: 40%;\n\tmargin: 4rem auto;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-around;\n\tpadding: 2rem;\n\theight: 300px;\n\tborder: 2px solid ", ";\n\tborder-radius: 5px;\n\th3 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t\tfont-size: 3rem;\n\t}\n\tbutton {\n\t\tpadding: 1rem;\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 3px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_7__["default"])(["\n\twidth: 60%;\n\tmargin: 4rem auto;\n\tdisplay: flex;\n\tflex-direction: column;\n\tjustify-content: space-around;\n\tpadding: 2rem;\n\theight: 300px;\n\tborder: 2px solid ", ";\n\tborder-radius: 5px;\n\th3 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t\tfont-size: 3rem;\n\t}\n\tbutton {\n\t\tpadding: 1rem;\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 3px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -154,7 +154,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/Control.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tmargin: 0 auto;\n\tmargin-bottom: 2rem;\n\tdisplay: flex;\n\tjustify-content: space-around;\n\tbutton {\n\t\tpadding: 1.5rem;\n\t\tbackground: ", ";\n\t\tcolor: #fff;\n\t\tfont-size: 1.5rem;\n\t\tborder: none;\n\t\tborder-radius: 3px;\n\t\tcursor: pointer;\n\t\twidth: 100px;\n\t\t:hover {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t\t:disabled {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 40%;\n\tmargin: 0 auto;\n\tmargin-bottom: 2rem;\n\tdisplay: flex;\n\tjustify-content: space-around;\n\tbutton {\n\t\tpadding: 1.5rem;\n\t\tbackground: ", ";\n\t\tcolor: #fff;\n\t\tfont-size: 1.5rem;\n\t\tborder: none;\n\t\tborder-radius: 3px;\n\t\tcursor: pointer;\n\t\twidth: 100px;\n\t\tmargin: 0 0.5rem;\n\t\t:hover {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t\t:disabled {\n\t\t\tbackground: rgba(211, 84, 0, 0.8);\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -186,22 +186,21 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Buttons, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 32
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.props.gameOver,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 33
         },
         __self: this
       }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        disabled: this.props.disabled,
         onClick: this.props.next,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 34
         },
         __self: this
       }, this.props.lastQuestion ? 'Review' : 'Next'));
@@ -358,10 +357,17 @@ function (_Component) {
       quizIsRunning: true,
       showExplanation: false,
       correctAnswers: 0,
-      questionAnswered: false
+      questionAnswered: false,
+      showError: false
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "nextQuestion", function () {
+      if (!_this.state.questionAnswered) {
+        return _this.setState({
+          showError: true
+        });
+      }
+
       if (_this.state.questionsCount - 1 == _this.state.currentQuestion) {
         // quiz is over
         _this.setState({
@@ -375,7 +381,8 @@ function (_Component) {
         return {
           currentQuestion: prevState.currentQuestion + 1,
           questionAnswered: false,
-          showExplanation: false
+          showExplanation: false,
+          showError: false
         };
       });
     });
@@ -419,7 +426,7 @@ function (_Component) {
       return this.state.quizIsRunning ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Title, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 74
         },
         __self: this
       }, "Frage ", this.state.currentQuestion + 1, " von ", this.state.questionsCount), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -428,21 +435,27 @@ function (_Component) {
         } : null,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 77
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }, this.state.showError && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, "Select an answer before going to the next question!"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
         question: this.state.questions[this.state.currentQuestion] || '',
         answerSelected: this.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 85
         },
         __self: this
       })), this.state.showExplanation && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 92
         },
         __self: this
       }, currentQuestion.explanation), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -452,7 +465,7 @@ function (_Component) {
         lastQuestion: this.state.currentQuestion + 1 === this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 94
         },
         __self: this
       })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameOver__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -461,7 +474,7 @@ function (_Component) {
         questions: this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 104
         },
         __self: this
       });
@@ -503,7 +516,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/maxeuler/Desktop/SoftwareDev/React/js-quiz/components/QuestionCard.js";
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 80%;\n\tborder: 2px solid ", ";\n\tborder-radius: 10px;\n\tbox-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);\n\tmargin: 4rem auto;\n\tp {\n\t\ttext-align: center;\n\t\tfont-size: 1.4rem;\n\t\tmargin: 2rem;\n\t}\n\th1 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t}\n\t.answers {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: 1fr 1fr;\n\t\tgrid-gap: 20px;\n\t\tmargin: 3rem auto;\n\t\twidth: 80%;\n\t}\n\t.wrong,\n\t.correct {\n\t\theight: 8rem;\n\t\twidth: 80%\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 5px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t\t:focus,\n\t\t:active {\n\t\t\t&.wrong {\n\t\t\t\tborder: 2px solid red;\n\t\t\t}\n\t\t\t&.correct {\n\t\t\t\tborder: 2px solid #2ecc71;\n\t\t\t}\n\t\t\toutline: none;\n\t\t}\n\t}\n\t.home {\n\t\twidth: 100%;\n\t\theight: 4rem;\n\t\tfont-size: 2rem;\n\t\tborder: none;\n\t\tbackground: none;\n\t\tmargin: 2rem 0;\n\t\tcolor: ", ";\n\t\tfont-weight: 500;\n\t\tcursor: pointer;\n\t\t:focus {\n\t\t\toutline: none;\n\t\t}\n\t}\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_5__["default"])(["\n\twidth: 80%;\n\tborder: 2px solid ", ";\n\tborder-radius: 10px;\n\tbox-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05);\n\tmargin: 4rem auto;\n\tp {\n\t\ttext-align: center;\n\t\tfont-size: 1.8rem;\n\t\tmargin: 2rem;\n\t}\n\th1 {\n\t\ttext-align: center;\n\t\tfont-weight: 300;\n\t}\n\t.answers {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: 1fr 1fr;\n\t\tgrid-gap: 20px;\n\t\tmargin: 3rem auto;\n\t\twidth: 80%;\n\t\t@media (max-width: 1000px) {\n\t\t\tgrid-template-columns: 1fr;\n\t\t}\n\t}\n\t.wrong,\n\t.correct {\n\t\theight: 8rem;\n\t\twidth: 80%\n\t\tmargin: 0 auto;\n\t\tborder: 1px solid ", ";\n\t\tborder-radius: 5px;\n\t\tfont-size: 1.4rem;\n\t\tcursor: pointer;\n\t\t:hover {\n\t\t\tbackground: rgba(0, 0, 0, 0.05);\n\t\t}\n\t\t:focus,\n\t\t:active {\n\t\t\t&.wrong {\n\t\t\t\tborder: 2px solid red;\n\t\t\t}\n\t\t\t&.correct {\n\t\t\t\tborder: 2px solid #2ecc71;\n\t\t\t}\n\t\t\toutline: none;\n\t\t}\n\t}\n\t.home {\n\t\twidth: 100%;\n\t\theight: 4rem;\n\t\tfont-size: 2rem;\n\t\tborder: none;\n\t\tbackground: none;\n\t\tmargin: 2rem 0;\n\t\tcolor: ", ";\n\t\tfont-weight: 500;\n\t\tcursor: pointer;\n\t\t:focus {\n\t\t\toutline: none;\n\t\t}\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -543,7 +556,7 @@ function (_PureComponent) {
         onClick: this.props.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 72
         },
         __self: this
       }, question.correct), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -552,7 +565,7 @@ function (_PureComponent) {
         onClick: this.props.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 79
         },
         __self: this
       }, question.wrong1), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -561,7 +574,7 @@ function (_PureComponent) {
         onClick: this.props.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 86
         },
         __self: this
       }, question.wrong2), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -570,27 +583,27 @@ function (_PureComponent) {
         onClick: this.props.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 93
         },
         __self: this
       }, question.wrong3)];
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Card, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 103
         },
         __self: this
       }, question.question), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "answers",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 104
         },
         __self: this
       }, answers.sort(function () {
@@ -7480,10 +7493,10 @@ var Home = function Home(props) {
 /*!************************!*\
   !*** ./questions.json ***!
   \************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, default */
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, default */
 /***/ (function(module) {
 
-module.exports = [{"question":"What does [...'Array'] return?","correct":"['A', 'r', 'r', 'a', 'y']","wrong1":"['Array']","wrong2":"[['A', 'r', 'r', 'a', 'y']]","wrong3":"[[], 'Array']","explanation":"The spread operator maps every character of an iterable to one element. A string is an iterable."},{"question":"What is the output of console.log(undefined * 2)?","correct":"NaN","wrong1":"0","wrong2":"undefined","wrong3":"TypeError","explanation":"Calculating with undefined results in 'not a number'."},{"question":"What is not a way to type cast values?","correct":"typeof","wrong1":"Boolean()","wrong2":"String()","wrong3":"parseFloat()","explanation":"The typeof operator simply returns the data type of the operand."},{"question":"How can you empty this: let array = [1, 2, 3, 4] ?","correct":"array.length = 0","wrong1":"array.length = null","wrong2":"array.empty()","wrong3":"array.slice(-1)","explanation":"By setting the array's length to 0, we remove all elements from the original array."},{"question":"What is the output of +true ?","correct":"1","wrong1":"false","wrong2":"TypeError","wrong3":"undefined","explanation":"The unary plus tries to convert an operand to a number. True is 1 and false is 0."},{"question":"What is the output of !hello ?","correct":"false","wrong1":"true","wrong2":"TypeError","wrong3":"nan","explanation":"A string is a truthy value. Not truthy is falsey, so the output is false."}];
+module.exports = [{"question":"What does [...'Array'] return?","correct":"['A', 'r', 'r', 'a', 'y']","wrong1":"['Array']","wrong2":"[['A', 'r', 'r', 'a', 'y']]","wrong3":"[[], 'Array']","explanation":"The spread operator maps every character of an iterable to one element. A string is an iterable."},{"question":"What is the output of console.log(undefined * 2) ?","correct":"NaN","wrong1":"0","wrong2":"undefined","wrong3":"TypeError","explanation":"Calculating with undefined results in 'not a number'."},{"question":"What is not a way to type cast values?","correct":"typeof","wrong1":"Boolean()","wrong2":"String()","wrong3":"parseFloat()","explanation":"The typeof operator simply returns the data type of the operand."},{"question":"How can you empty this: let array = [1, 2, 3, 4] ?","correct":"array.length = 0","wrong1":"array.length = null","wrong2":"array.empty()","wrong3":"array.slice(-1)","explanation":"By setting the array's length to 0, we remove all elements from the original array."},{"question":"What is the output of +true ?","correct":"1","wrong1":"false","wrong2":"TypeError","wrong3":"undefined","explanation":"The unary plus tries to convert an operand to a number. True is 1 and false is 0."},{"question":"What is the output of !hello ?","correct":"false","wrong1":"true","wrong2":"TypeError","wrong3":"NaN","explanation":"A string is a truthy value. Not truthy is falsey, so the output is false."},{"question":"How to get the length of: const obj = {1: 'a', 2: 'b'} ?","correct":"Object.keys(obj).length","wrong1":"obj.length","wrong2":"obj.size()","wrong3":"Array.of(obj).length","explanation":"Object.keys() returns an arry of the keys, so we can use the length property of Array."},{"question":"How can we remove the duplicates: const array = [1, 2, 1, 3] ?","correct":"[...new Set(array)]","wrong1":"array.remove(1)","wrong2":"array.set()","wrong3":"array.filter()","explanation":"We create a new set which has no duplicates. By using the spread operator we create a new array and fill it with our new set."},{"question":"What is a high-order function?","correct":"A function that takes or passes out a function","wrong1":"A function without return value","wrong2":"An asynchronous function","wrong3":"A function that manipulates global state","explanation":"A high-order function is just a function that takes a function as an argument or returns a function. They simplify our code and keep it DRY (don't repeat yourself)."},{"question":"What is the output: NaN === NaN ?","correct":"false","wrong1":"true","wrong2":"NaN","wrong3":"TypeError","explanation":"The definition of the IEEE says: 'Every NaN shall compare unordered with everything, including itself.'"}];
 
 /***/ }),
 

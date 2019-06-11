@@ -9,7 +9,7 @@ export const Card = styled.div`
 	margin: 4rem auto;
 	p {
 		text-align: center;
-		font-size: 1.4rem;
+		font-size: 1.8rem;
 		margin: 2rem;
 	}
 	h1 {
@@ -22,6 +22,9 @@ export const Card = styled.div`
 		grid-gap: 20px;
 		margin: 3rem auto;
 		width: 80%;
+		@media (max-width: 1000px) {
+			grid-template-columns: 1fr;
+		}
 	}
 	.wrong,
 	.correct {

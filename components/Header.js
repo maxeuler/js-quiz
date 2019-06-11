@@ -30,7 +30,7 @@ const Header = props => (
 		<h3>JS-Quiz</h3>
 		<nav>
 			<Link href="/">
-				<a>Home</a>
+				<a>Game</a>
 			</Link>
 			<Link href="/add">
 				<a>Add Question</a>

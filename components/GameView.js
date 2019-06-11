@@ -27,7 +27,8 @@ class GameView extends Component {
 		quizIsRunning: true,
 		showExplanation: false,
 		correctAnswers: 0,
-		questionAnswered: false
+		questionAnswered: false,
+		showError: false
 	};
 
 	componentDidMount() {
@@ -39,6 +40,9 @@ class GameView extends Component {
 	}
 
 	nextQuestion = () => {
+		if (!this.state.questionAnswered) {
+			return this.setState({ showError: true });
+		}
 		if (this.state.questionsCount - 1 == this.state.currentQuestion) {
 			// quiz is over
 			this.setState({ quizIsRunning: false });
@@ -47,7 +51,8 @@ class GameView extends Component {
 		this.setState(prevState => ({
 			currentQuestion: prevState.currentQuestion + 1,
 			questionAnswered: false,
-			showExplanation: false
+			showExplanation: false,
+			showError: false
 		}));
 	};
 
@@ -72,6 +77,11 @@ class GameView extends Component {
 				<div
 					style={this.state.questionAnswered ? { pointerEvents: 'none' } : null}
 				>
+					{this.state.showError && (
+						<Explanation>
+							Select an answer before going to the next question!
+						</Explanation>
+					)}
 					<QuestionCard
 						question={this.state.questions[this.state.currentQuestion] || ''}
 						answerSelected={this.answerSelected}
