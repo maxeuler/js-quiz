@@ -15,7 +15,7 @@ class MyDocument extends Document {
 		return (
 			<html>
 				<Head>{this.props.styleTags}</Head>
-				<body>
+				<body onTouchStart="">
 					<Main />
 					<NextScript />
 				</body>

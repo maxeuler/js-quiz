@@ -2326,6 +2326,7 @@ function (_Document) {
         },
         __self: this
       }, this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("body", {
+        onTouchStart: "",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18

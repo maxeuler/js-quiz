@@ -1,3 +1,5 @@
-const Add = props => <h1>Coming soon...</h1>;
+import Upload from '../components/Upload';
+
+const Add = props => <Upload />;
 
 export default Add;

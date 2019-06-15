@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-	primary: '#d35400'
+	primary: '#d35400',
+	border: '#bdc3c7'
 };
 
 const Inner = styled.div`
