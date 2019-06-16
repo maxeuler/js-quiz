@@ -455,7 +455,8 @@ function (_Component) {
       showExplanation: false,
       correctAnswers: 0,
       questionAnswered: false,
-      showError: false
+      showError: false,
+      success: false
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "nextQuestion", function () {
@@ -479,14 +480,13 @@ function (_Component) {
           currentQuestion: prevState.currentQuestion + 1,
           questionAnswered: false,
           showExplanation: false,
-          showError: false
+          showError: false,
+          success: false
         };
       });
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "answerSelected", function (e) {
-      console.log(e.target.className);
-
       _this.setState({
         questionAnswered: true,
         showExplanation: true
@@ -495,7 +495,8 @@ function (_Component) {
       if (e.target.className === 'correct') {
         _this.setState(function (prevState) {
           return {
-            correctAnswers: prevState.correctAnswers + 1
+            correctAnswers: prevState.correctAnswers + 1,
+            success: true
           };
         });
       }
@@ -523,7 +524,7 @@ function (_Component) {
       return this.state.quizIsRunning ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Title, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 76
         },
         __self: this
       }, "Frage ", this.state.currentQuestion + 1, " von ", this.state.questionsCount), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
@@ -532,13 +533,13 @@ function (_Component) {
         } : null,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 79
         },
         __self: this
       }, this.state.showError && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 83
         },
         __self: this
       }, "Select an answer before going to the next question!"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_QuestionCard__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -546,23 +547,29 @@ function (_Component) {
         answerSelected: this.answerSelected,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 87
         },
         __self: this
-      })), this.state.showExplanation && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
+      })), this.state.showExplanation && react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 95
         },
         __self: this
-      }, currentQuestion.explanation), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }, this.state.success ? 'Correct! 💯' : 'Oooohps 😮'), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Explanation, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, currentQuestion.explanation)), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_Control__WEBPACK_IMPORTED_MODULE_12__["default"], {
         disabled: !this.state.questionAnswered,
         next: this.nextQuestion,
         gameOver: this.props.gameOver,
         lastQuestion: this.state.currentQuestion + 1 === this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 101
         },
         __self: this
       })) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_GameOver__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -571,7 +578,7 @@ function (_Component) {
         questions: this.state.questionsCount,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 111
         },
         __self: this
       });

@@ -28,7 +28,8 @@ class GameView extends Component {
 		showExplanation: false,
 		correctAnswers: 0,
 		questionAnswered: false,
-		showError: false
+		showError: false,
+		success: false
 	};
 
 	componentDidMount() {
@@ -52,16 +53,17 @@ class GameView extends Component {
 			currentQuestion: prevState.currentQuestion + 1,
 			questionAnswered: false,
 			showExplanation: false,
-			showError: false
+			showError: false,
+			success: false
 		}));
 	};
 
 	answerSelected = e => {
-		console.log(e.target.className);
 		this.setState({ questionAnswered: true, showExplanation: true });
 		if (e.target.className === 'correct') {
 			this.setState(prevState => ({
-				correctAnswers: prevState.correctAnswers + 1
+				correctAnswers: prevState.correctAnswers + 1,
+				success: true
 			}));
 		}
 	};
@@ -89,7 +91,12 @@ class GameView extends Component {
 				</div>
 
 				{this.state.showExplanation && (
-					<Explanation>{currentQuestion.explanation}</Explanation>
+					<>
+						<Explanation>
+							{this.state.success ? 'Correct! 💯' : 'Oooohps 😮'}
+						</Explanation>
+						<Explanation>{currentQuestion.explanation}</Explanation>
+					</>
 				)}
 				<Control
 					disabled={!this.state.questionAnswered}
