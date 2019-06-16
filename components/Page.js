@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Header from './Header';
+import Meta from './Meta';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -31,6 +32,7 @@ const Page = props => (
 	<ThemeProvider theme={theme}>
 		<>
 			<GlobalStyle />
+			<Meta />
 			<Header />
 			<Inner>{props.children}</Inner>
 		</>

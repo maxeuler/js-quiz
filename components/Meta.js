@@ -7,3 +7,5 @@ const Meta = () => (
 		<title>JS Quiz</title>
 	</Head>
 );
+
+export default Meta;
