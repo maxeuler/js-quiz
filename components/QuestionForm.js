@@ -78,6 +78,7 @@ class QuestionForm extends Component {
 							name="question"
 							onChange={this.handleChange}
 							value={this.state.question}
+							required
 						/>
 					</label>
 					<label htmlFor="correct">
@@ -87,6 +88,7 @@ class QuestionForm extends Component {
 							name="correct"
 							onChange={this.handleChange}
 							value={this.state.correct}
+							required
 						/>
 					</label>
 					<label htmlFor="wrong1">
@@ -96,6 +98,7 @@ class QuestionForm extends Component {
 							name="wrong1"
 							onChange={this.handleChange}
 							value={this.state.wrong1}
+							required
 						/>
 					</label>
 					<label htmlFor="wrong2">
@@ -105,6 +108,7 @@ class QuestionForm extends Component {
 							name="wrong2"
 							onChange={this.handleChange}
 							value={this.state.wrong2}
+							required
 						/>
 					</label>
 					<label htmlFor="wrong3">
@@ -114,6 +118,7 @@ class QuestionForm extends Component {
 							name="wrong3"
 							onChange={this.handleChange}
 							value={this.state.wrong3}
+							required
 						/>
 					</label>
 					<label htmlFor="explanation">
@@ -124,6 +129,7 @@ class QuestionForm extends Component {
 							rows="5"
 							onChange={this.handleChange}
 							value={this.state.explanation}
+							required
 						/>
 					</label>
 					<button>Submit</button>
